@@ -1,2 +1,2 @@
-# Complicated_Programs
+# k310prg
 課題
