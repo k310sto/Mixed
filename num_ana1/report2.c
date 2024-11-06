@@ -38,7 +38,8 @@ int main(){
 	}
 
 	FILE *ip = fopen(filename, "r");
-	while( (letr = fgetc(ip)) != EOF ){
+	while(!feof(ip)){
+		letr = fgetc(ip);
 		for( int i = 0; i < 55; i++ ){		//"z"が文字コード122
 			moji[i].code = liter_code(i);	//今から調べる文字のコードを格納
 			if( letr == moji[i].code ){

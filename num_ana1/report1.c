@@ -9,7 +9,8 @@ int main(){
 	FILE *op = fopen("output.txt", "w");
 
 	char letr;
-	while( (letr = fgetc(ip)) != EOF ){
+	while(!feof(ip)){
+		letr = fgetc(ip);
 		if( isalpha(letr) )
 			fprintf(op, "%c", letr);
 		else {
